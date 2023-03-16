@@ -22,6 +22,7 @@ class Register():
         """
         no_file = False
         habitant_at_home = True
+        print('algo')
 
         try:
             with open("home.txt", mode="r", encoding="utf-8") as file:
@@ -102,10 +103,13 @@ class Register():
         Returns:
             int: 4 digit access code
         """
-        with open("home.txt", mode="r", encoding="utf-8") as file:
-            habitants = json.load(file)
-            users = habitants.get('users')
-            codes = [user.get('access_code') for user in users]
+        try:
+            with open("home.txt", mode="r", encoding="utf-8") as file:
+                habitants = json.load(file)
+                users = habitants.get('users')
+                codes = [user.get('access_code') for user in users]
+        except OSError:
+            return randint(1000, 9999)
 
         new_code = randint(1000, 9999)
         # Ensure code is unique

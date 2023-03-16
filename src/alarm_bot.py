@@ -72,10 +72,10 @@ def get_code(message):
 	"""
     code = register.get_code(message.from_user.username)
     if code:
-        message = f"Your private access code is {code}. Be careful and don't share it."
+        answer = f"Your private access code is {code}. Be careful and don't share it."
     else:
-        message = "You aren't registered in the system, please register first to have a code."
-    bot.send_message(message.chat.id, message, parse_mode="Markdown")
+        answer = "You aren't registered in the system, please register first to have a code."
+    bot.send_message(message.chat.id, answer, parse_mode="Markdown")
 
 
 bot.polling()
