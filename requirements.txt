@@ -1,0 +1,4 @@
+pyTelegramBotAPI==4.5.1
+python-dotenv==0.15.0
+invoke
+uvicorn
