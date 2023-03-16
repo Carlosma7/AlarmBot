@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Home register file
+home.txt
+
+# Home system logs
+api.err
+api.log
+bot.err
+bot.log
